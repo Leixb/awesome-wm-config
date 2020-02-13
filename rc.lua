@@ -2355,6 +2355,7 @@ awful.key({ modkey, "Shift" }, "`", customization.func.client_toggle_titlebar),
 awful.key({ modkey, }, "`", customization.func.system_lock),
 
 awful.key({ modkey, }, "Home", customization.func.system_lock),
+awful.key({ "Mod1", "Control" }, "l", customization.func.system_lock),
 
 awful.key({ modkey, }, "End", customization.func.system_suspend),
 
@@ -2366,7 +2367,7 @@ awful.key({ modkey, }, "Insert", customization.func.system_reboot),
 
 awful.key({ modkey, }, "Delete", customization.func.system_power_off),
 
-awful.key({ modkey, }, "/", customization.func.app_finder),
+awful.key({ modkey, }, "d", customization.func.app_finder),
 
 --- everyday
 
@@ -2596,7 +2597,7 @@ nil
 --- operation
 clientkeys = awful.util.table.join(
 
-awful.key({ modkey, "Shift"   }, "c", customization.func.client_kill),
+awful.key({ modkey }, "w", customization.func.client_kill),
 
 awful.key({ "Mod1",   }, "F4", customization.func.client_kill),
 
