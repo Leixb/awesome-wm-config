@@ -70,7 +70,7 @@ customization.config.version = "4.0.23"
 customization.config.help_url = "https://github.com/pw4ever/awesome-wm-config/tree/" .. customization.config.version
 
 customization.default.property = {
-    layout = awful.layout.suit.floating,
+    layout = awful.layout.suit.tile,
     mwfact = 0.5,
     nmaster = 1,
     ncol = 1,
@@ -84,9 +84,9 @@ customization.default.property = {
     minimal_client_height = 50,
 }
 
-customization.default.compmgr = 'xcompmgr'
-customization.default.compmgr_args = '-f -c -s'
-customization.default.wallpaper_change_interval = 15
+customization.default.compmgr = 'picom'
+customization.default.compmgr_args = '-f -c'
+customization.default.wallpaper_change_interval = 60
 
 customization.option.wallpaper_change_p = true
 customization.option.launch_compmgr_p = false
@@ -275,7 +275,7 @@ end
 
 --{{
 local tools = {
-    terminal = "kitty",
+    terminal = "alacritty",
     system = {
     },
     browser = {
@@ -287,12 +287,12 @@ local tools = {
 }
 
 tools.system.filemanager = tools.terminal .. " -e ranger"
-tools.system.taskmanager = "xfce4-taskmanager"
+tools.system.taskmanager = tools.terminal .. " -e gotop"
 
-tools.browser.primary = "chromium"
-tools.browser.primary_private = tools.browser.primary .. " --incognito"
-tools.browser.secondary = "firefox"
-tools.browser.secondary_private = tools.browser.secondary .. " --private"
+tools.browser.primary = "firefox"
+tools.browser.primary_private = tools.browser.primary .. " --private"
+tools.browser.secondary = "vivaldi"
+tools.browser.secondary_private = tools.browser.secondary .. " --incognito"
 
 -- alternative: override
 --tools.browser.primary = "google-chrome-stable"
@@ -300,7 +300,7 @@ tools.browser.secondary_private = tools.browser.secondary .. " --private"
 --tools.browser.secondary = "firefox"
 --tools.browser.secondary_private = tools.browser.secondary .. " --private"
 
-tools.editor.primary = "gvim"
+tools.editor.primary = tools.terminal .. " -e nvim"
 tools.editor.secondary = "emacs"
 
 -- alternative: override
@@ -381,7 +381,7 @@ end
 -- {{{ Customized functions
 
 customization.func.system_lock = function ()
-    awful.util.spawn("xfce4-screensaver-command -l")
+    awful.util.spawn("i3lock-fancy-dualmonitor")
 end
 
 customization.func.system_suspend = function ()
@@ -447,7 +447,7 @@ customization.func.system_power_off = function ()
 end
 
 customization.func.app_finder = function ()
-    awful.util.spawn("xfce4-appfinder")
+    awful.util.spawn("rofi -show drun -modi window,run,ssh,drun")
 end
 
 -- {{ client actions
