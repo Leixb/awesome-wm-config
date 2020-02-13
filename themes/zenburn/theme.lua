@@ -107,6 +107,12 @@ theme.layout_max        = theme.confdir .. "/icons/layouts/max.png"
 theme.layout_fullscreen = theme.confdir .. "/icons/layouts/fullscreen.png"
 theme.layout_magnifier  = theme.confdir .. "/icons/layouts/magnifier.png"
 theme.layout_floating   = theme.confdir .. "/icons/layouts/floating.png"
+theme.cascade           = theme.confdir .. "/icons/layouts/cascade.png"
+theme.cascadetile       = theme.confdir .. "/icons/layouts/cascadetile.png"
+theme.centerfair        = theme.confdir .. "/icons/layouts/centerfair.png"
+theme.centerwork        = theme.confdir .. "/icons/layouts/centerwork.png"
+theme.centerworkh       = theme.confdir .. "/icons/layouts/centerworkh.png"
+theme.termfair          = theme.confdir .. "/icons/layouts/termfair.png"
 -- }}}
 
 -- {{{ Widget icons
