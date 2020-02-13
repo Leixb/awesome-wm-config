@@ -36,6 +36,9 @@ local util = require("util")
 -- universal arguments
 local uniarg = require("uniarg")
 
+-- lain layouts
+local lain = require("lain")
+
 local capi = {
     tag = tag,
     screen = screen,
@@ -341,8 +344,10 @@ local layouts =
     awful.layout.suit.floating,
     awful.layout.suit.tile,
     awful.layout.suit.fair,
-    awful.layout.suit.max.fullscreen,
+    awful.layout.suit.spiral,
+    lain.layout.centerwork,
     awful.layout.suit.magnifier,
+    awful.layout.suit.max.fullscreen,
 }
 --[[
 local layouts =
