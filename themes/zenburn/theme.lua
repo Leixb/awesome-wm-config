@@ -15,7 +15,7 @@ theme.confdir       = awful.util.getdir("config") .. "/themes/" .. theme.name
 
 
 -- {{{ Styles
-theme.font      = "Profont 10"
+theme.font      = "SauceCodePro Nerd Font 7"
 
 -- {{{ Colors
 theme.fg_normal = "#DCDCCC"
